@@ -70,7 +70,7 @@ public class Enlace {
 
         }
     }
-    
+
     public void insertarPlanPostPagoMegas(PlanPostPagoMegas plan) {
 
         try {
@@ -101,8 +101,7 @@ public class Enlace {
 
         }
     }
-    
-    
+
     public void insertarPlanPostPagoMinutosMegas(PlanPostPagoMinutosMegas plan) {
 
         try {
@@ -134,10 +133,8 @@ public class Enlace {
 
         }
     }
-    
-    
-    public void insertarPlanPostPagoMinutosMegasEconomico
-                                    (PlanPostPagoMinutosMegasEconomico plan) {
+
+    public void insertarPlanPostPagoMinutosMegasEconomico(PlanPostPagoMinutosMegasEconomico plan) {
 
         try {
             establecerConexion();
@@ -170,8 +167,7 @@ public class Enlace {
 
         }
     }
-    
-    
+
     public ArrayList<PlanCelular> obtenerDataPlanes() {
         ArrayList<PlanCelular> lista = new ArrayList<>();
         try {
@@ -194,7 +190,7 @@ public class Enlace {
                         rs.getDouble("costoNacional"),
                         rs.getInt("minutosInternacionales"),
                         rs.getDouble("costoInternacional"));
-
+                plan.establecerPagoMensual();
                 lista.add(plan);
             }
 
@@ -213,6 +209,8 @@ public class Enlace {
                         rs.getDouble("gigas"),
                         rs.getDouble("costoGiga"),
                         rs.getDouble("tarifa"));
+                plan.establecerPagoMensual();
+
                 lista.add(plan);
             }
 
@@ -232,7 +230,7 @@ public class Enlace {
                         rs.getDouble("costoMinutos"),
                         rs.getInt("gigas"),
                         rs.getDouble("costoGiga"));
-
+                plan.establecerPagoMensual();
                 lista.add(plan);
             }
 
@@ -253,7 +251,7 @@ public class Enlace {
                         rs.getInt("gigas"),
                         rs.getDouble("costoGiga"),
                         rs.getDouble("descuento"));
-
+                plan.establecerPagoMensual();
                 lista.add(plan);
             }
 

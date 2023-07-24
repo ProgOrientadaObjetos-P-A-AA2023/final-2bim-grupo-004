@@ -54,12 +54,6 @@ public class PlanPostPagoMegas extends PlanCelular {
     public void establecerTarifaBase(double tB) {
         tarifaBase = tB;
     }
-    
-    @Override
-    public double obtenerPagoMensual() {
-        return pagoMensual;
-    }
-    
 
     @Override
     public void establecerPagoMensual() {

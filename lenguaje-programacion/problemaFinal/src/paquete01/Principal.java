@@ -274,7 +274,7 @@ public class Principal {
                                     gigas,
                                     costoGiga,
                                     descuento);
-
+                    
                     planEconomico.establecerPagoMensual();
                     c.insertarPlanPostPagoMinutosMegasEconomico(planEconomico);
                     System.out.println("Plan creado con exito!");

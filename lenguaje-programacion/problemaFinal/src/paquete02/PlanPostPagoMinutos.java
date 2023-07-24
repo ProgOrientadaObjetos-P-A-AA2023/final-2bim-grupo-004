@@ -68,10 +68,6 @@ public class PlanPostPagoMinutos extends PlanCelular {
         costoMinutoInternacional = cM;
     }
 
-    @Override
-    public double obtenerPagoMensual() {
-        return pagoMensual;
-    }
     
     @Override
     public void establecerPagoMensual(){

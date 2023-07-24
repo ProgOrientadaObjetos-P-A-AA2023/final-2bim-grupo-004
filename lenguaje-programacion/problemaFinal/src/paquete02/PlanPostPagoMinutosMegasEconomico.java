@@ -74,20 +74,15 @@ public class PlanPostPagoMinutosMegasEconomico extends PlanCelular {
         return porcentajeDescuento;
     }
 
-    public void establecerPorcentajeDescuento() {
-        porcentajeDescuento = (porcentajeDescuento * 
-                (minutos*costoMinuto) + (megasEnGigas*costoPorGiga))/100;
+    public void establecerPorcentajeDescuento(double pD) {
+        porcentajeDescuento = pD;
     }
 
     @Override
     public void establecerPagoMensual() {
-        pagoMensual = ((minutos*costoMinuto) + (megasEnGigas*costoPorGiga) - 
-                                                porcentajeDescuento );
-    }
-    
-    @Override
-    public double obtenerPagoMensual() {
-        return pagoMensual;
+        pagoMensual = ((minutos * costoMinuto) + (megasEnGigas * costoPorGiga))
+                - (((costoMinuto * minutos + costoPorGiga * megasEnGigas)
+                * porcentajeDescuento) / 100);
     }
 
     @Override
