@@ -1,4 +1,4 @@
-# Trabajo Final Segundo Bimestre
+# Trabajo Final Segundo Bimestre por Denis Ruiz y Carlos Mejia 
 
 * El siguiente trabajo se lo realizará de forma grupal (grupos de máximo dos personas).
 
