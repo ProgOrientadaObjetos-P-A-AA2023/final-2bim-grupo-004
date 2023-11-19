@@ -44,7 +44,9 @@ public class Principal {
             System.out.println("4. Ingrese 4 si desea adquirir un "
                     + "Plan Post Pago Minuto Megas Economico");
 
-            System.out.println("5. Ingrese 5 para salir");
+            System.out.println("5. Ingrese 5 para LECTURA DE PLANES");
+
+            System.out.println("6. Ingrese 6 para salir");
 
             opcion = sc.nextInt();
 
@@ -274,24 +276,28 @@ public class Principal {
                                     gigas,
                                     costoGiga,
                                     descuento);
-                    
+
                     planEconomico.establecerPagoMensual();
                     c.insertarPlanPostPagoMinutosMegasEconomico(planEconomico);
                     System.out.println("Plan creado con exito!");
                     break;
                 case 5:
+                    System.out.println("Sus planes son:\n");
+                    for (int i = 0; i < c.obtenerDataPlanes().size(); i++) {
+                        System.out.println(c.obtenerDataPlanes().get(i));
+                    }
+                    break;
+
+                case 6:
                     System.out.println("Gracias por preferir a TELEFONICA!");
                     flag = false;
                     break;
+
                 default:
                     System.err.println("Ingrese una opcion correcta por favor");
                     break;
             }
 
-        }
-        System.out.println("Sus planes son:\n");
-        for (int i = 0; i < c.obtenerDataPlanes().size(); i++) {
-            System.out.println(c.obtenerDataPlanes().get(i));
         }
 
     }
