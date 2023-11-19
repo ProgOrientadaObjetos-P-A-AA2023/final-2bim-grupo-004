@@ -11,19 +11,19 @@ package paquete02;
 public abstract class PlanCelular {
 
     protected String nombreApellidoPropietario;
-    protected String ciudadPropietaria;    protected String pasaportePropietario;
-
+    protected String ciudadPropietaria;
+    protected String pasaportePropietario;
     protected String barrioPropietario;
     protected String marcaCelular;
     protected String modeloCelular;
     protected String numeroCelular;
     protected double pagoMensual;
 
-    public PlanCelular(String nombreApellidoP, String pasaporteP, 
-            String ciudadP, String barrioP, 
-            String marcaC, String modeloC, 
+    public PlanCelular(String nombreApellidoP, String pasaporteP,
+            String ciudadP, String barrioP,
+            String marcaC, String modeloC,
             String numeroC) {
-        
+
         nombreApellidoPropietario = nombreApellidoP;
         pasaportePropietario = pasaporteP;
         ciudadPropietaria = ciudadP;
@@ -31,8 +31,7 @@ public abstract class PlanCelular {
         marcaCelular = marcaC;
         modeloCelular = modeloC;
         numeroCelular = numeroC;
-        
-        
+
     }
 
     public String obtenerNombreApellidoPropietario() {
@@ -40,7 +39,7 @@ public abstract class PlanCelular {
     }
 
     public void establecerNombreApellidoPropietario(String nomP) {
-       nombreApellidoPropietario = nomP;
+        nombreApellidoPropietario = nomP;
     }
 
     public String obtenerPasaportePropietario() {
@@ -96,6 +95,5 @@ public abstract class PlanCelular {
     }
 
     public abstract void establecerPagoMensual();
-    
-    
+
 }
